@@ -1,8 +1,16 @@
+function printEvenNums(){
+  //get the start and end range from user
+  var start = parseInt(document.getElementById("start").value);
+  var end = parseInt(document.getElementById("end").value);
+  var evenNums = "<br>Even Numbers:<br>";
 
-      document.getElementById("convert").onclick = function() {
-        var km = document.getElementById("km").value;
-        var miles = km / 1.609;
-        miles = miles.toFixed(4);
-        document.getElementById("res").innerHTML = ' ' + miles + ' miles'; 
-      }
-    
+  for(i=start; i<=end; i++){
+    // let's divide the value by 2
+    // if the reminder is zero then it's an Even number
+    if(i % 2 == 0){
+      evenNums += i + "<br>";
+    }
+  }
+  //print the values
+  document.getElementById("result").innerHTML = evenNums;
+}
